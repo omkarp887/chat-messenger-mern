@@ -23,7 +23,7 @@ app.get('/', (req, res)=>{
      res.send('This is from backend Sever')
 })
 
-databaseConnect();
+databaseConnect.databaseConnect();
 
 app.use(express.static(path.join(__dirname, "../frontend/build")));
 
