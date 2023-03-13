@@ -23,12 +23,12 @@ app.get('/', (req, res)=>{
      res.send('This is from backend Sever')
 })
 
-databaseConnect.databaseConnect();
+databaseConnect();
 
-app.use(express.static(path.join(__dirname, "../frontend/build")));
+app.use(express.static(path.join(__dirname, "../frontend/public")));
 
 app.get("*", (req, res)=>{
-     res.sendFile(path.resolve(__dirname,"../frontend/build/index.html"));
+     res.sendFile(path.resolve(__dirname,"../frontend/public/index.html"));
 })
 
 app.listen(PORT, ()=>{
